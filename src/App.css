@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+
+body {
+  background: linear-gradient(to bottom, #e6f2ff, #ffffff);
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-weight: bold;
+  color: #007bff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.navbar-light .navbar-nav .nav-link {
+  color: #0056b3;
+  transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #003d80;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #003d80;
+}
+
+footer {
+  background: linear-gradient(to right, #007bff, #0056b3);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+iframe {
+  border-radius: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+section:nth-of-type(even) {
+  background: #eaf4ff;
 }
+
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #0056b3;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 91, 187, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0056b3, #004a99);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
