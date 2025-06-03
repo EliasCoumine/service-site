@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import logo from '../images/logo.png'
 
 const About = () => (
   <section id="about" className="py-5 bg-light">
     <Container>
       <Row className="align-items-center">
         <Col md={6}>
-          <Image src="https://via.placeholder.com/500x350" fluid rounded />
+          <Image src={logo} fluid rounded style={{ maxWidth: '450px' }}/>
         </Col>
         <Col md={6}>
           <h2 className="text-primary">About Our Clinic</h2>
