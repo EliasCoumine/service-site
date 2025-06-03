@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
-import logo from '../images/logo.png'; // or your new PNG logo
+import logo from '../images/logo.png'; 
 
 const About = () => (
   <section id="about" className="py-5 bg-light">
     <Container>
-      {/* Slogan inserted here */}
+      {/* Slogan */}
       <h3 className="text-center mb-4 fst-italic" style={{
                 background: 'linear-gradient(to right, #007bff, #0056b3)',
                 WebkitBackgroundClip: 'text',
