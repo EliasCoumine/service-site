@@ -1,22 +1,40 @@
-import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Navbar, Container } from 'react-bootstrap';
+import { FaHome, FaTooth, FaCalendarAlt, FaEnvelope } from 'react-icons/fa'; /* icons imported from react */
+import '../App.css'; 
 
-const Navigation = () => (
-  <Navbar bg="light" expand="lg" fixed="top">
-    <Container>
-      <Navbar.Brand href="#home" className="text-primary">DentalCare Clinic</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ms-auto">
-          {/* <Nav.Link href="#home">Home</Nav.Link> */}
-          <Nav.Link href="#about">About</Nav.Link>
-          <Nav.Link href="#services">Services</Nav.Link>
-          <Nav.Link href="#booking">Book Now</Nav.Link>
-          <Nav.Link href="#contact">Contact</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-);
+
+const navLinks = [
+  { href: "#about", icon: <FaHome />, label: "About" },
+  { href: "#services", icon: <FaTooth />, label: "Services" },
+  { href: "#booking", icon: <FaCalendarAlt />, label: "Book" },
+  { href: "#contact", icon: <FaEnvelope />, label: "Contact" },
+];
+
+const Navigation = () => {
+  {/* tracks the state of the icon to add an underline when needed */}
+  const [activeIdx, setActiveIdx] = useState(0);
+
+  return (
+    <Navbar bg="light" fixed="top" className="d-flex justify-content-between px-4 py-2 shadow-sm">
+      <span className="navbar-brand text-primary">DentalCare Clinic</span>
+
+      <div className="nav-icon-bar d-flex gap-3 align-items-center">
+        {/*quick loop to iterate over the navLinks array */}
+        {navLinks.map((link, idx) => (
+          <a
+            key={idx}
+            href={link.href}
+            className={`icon-link ${activeIdx === idx ? 'active' : ''}`}
+            onClick={() => setActiveIdx(idx)}
+            aria-label={link.label}
+          >
+            {link.icon}
+          </a>
+        ))}
+      </div>
+    </Navbar>
+  );
+};
 
 export default Navigation;

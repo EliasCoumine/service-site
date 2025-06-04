@@ -113,3 +113,91 @@ h2 {
   padding: 3rem 2rem;      
   min-height: 450px;      
 }
+
+.contact-section-bg {
+  background: linear-gradient(120deg, #e0ecff 0%, #f4f9fe 100%);
+  padding-bottom: 2rem;
+}
+
+.contact-card {
+  border-left: 6px solid #1a73e8;
+  border-radius: 2rem;
+  background: #fff;
+  box-shadow: 0 12px 36px rgba(26, 115, 232, 0.10);
+  max-width: 950px;
+  margin: auto;
+}
+
+.map-responsive {
+  width: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .contact-card {
+    padding: 1.5rem;
+    border-left: none;
+    border-top: 6px solid #1a73e8;
+  }
+}
+
+
+
+
+/* Icon Navbar */
+.top-icon-nav {
+  position: fixed;
+  top: 18px;
+  right: 32px;
+  display: flex;
+  gap: 20px;
+  z-index: 1050;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.6rem 1rem;
+  border-radius: 1.2em;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-nav-link {
+  font-size: 1.4em;
+  color: #0d6efd;
+  transition: all 0.2s ease;
+  padding: 0.4em;
+  border-radius: 0.8em;
+}
+
+.icon-nav-link:hover,
+.icon-nav-link.active {
+  background: #0d6efd;
+  color: white;
+  box-shadow: 0 4px 18px rgba(0, 91, 187, 0.13);
+}
+
+.nav-icon-bar a.icon-link {
+  position: relative;
+  font-size: 1.4rem;
+  color: #0d6efd;
+  padding: 0.4rem;
+  border-radius: 0.6rem;
+  transition: background 0.2s, color 0.2s;
+  display: inline-block;
+}
+
+.nav-icon-bar a.icon-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #0d6efd;
+  border-radius: 4px;
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-icon-bar a.icon-link:hover::after,
+.nav-icon-bar a.icon-link.active::after {
+  width: 100%;
+}
+
