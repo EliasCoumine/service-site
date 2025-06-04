@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Modal } from 'react-bootstrap';
 
 const Booking = () => {
+
+  // declared var today
+  const today = new Date().toISOString().split('T')[0];
+
   const [show, setShow] = useState(false);
 
   const handleSubmit = (e) => {
@@ -42,13 +46,13 @@ const Booking = () => {
                 <Col md={6}>
                   <Form.Group controlId="formPhone" className="mb-3">
                     <Form.Label>Phone Number</Form.Label>
-                    <Form.Control type="tel" placeholder="(123) 456-7890" required />
+                    <Form.Control type="text" inputMode='numeric' pattern="[0-9 ()+-]{10,}"   title='Please enter a valid phone number' placeholder="(123) 456-7890" required />
                   </Form.Group>
                 </Col>
                 <Col md={6}>
                   <Form.Group controlId="formDate" className="mb-3">
                     <Form.Label>Preferred Date</Form.Label>
-                    <Form.Control type="date" required />
+                    <Form.Control type="date" min={today} required />
                   </Form.Group>
                 </Col>
               </Row>
