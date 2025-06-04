@@ -103,3 +103,13 @@ h2 {
 .nav-link:focus::after {
   width: 100%;
 }
+
+.services-big-card {
+  background: #e9f4ff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.09);
+  max-width: 1200px;       
+  margin: 0 auto;       
+  padding: 3rem 2rem;      
+  min-height: 450px;      
+}
