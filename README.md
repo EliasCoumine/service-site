@@ -1,4 +1,4 @@
-🦷 DentalCare Clinic Website
+### 🦷 DentalCare Clinic Website
 A modern dental clinic website built with React and React Bootstrap. Designed as part of a UI/UX project.
 
 ## Available Scripts
