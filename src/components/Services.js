@@ -55,7 +55,9 @@ const Services = () => (
                 <Card.Body className="d-flex flex-column text-center">
                   <Card.Title style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     {s.title}
-                    <img
+
+                    {/* icons out for now */}
+                    {/* <img
                       src={s.icon}
                       alt=""
                       style={{
@@ -63,7 +65,9 @@ const Services = () => (
                         height: "1.4em",
                         marginLeft: "0.3em"
                       }}
-                    />
+                    /> */}
+
+
                   </Card.Title>
                   <Card.Text className="text-muted">{s.description}</Card.Text>
                 </Card.Body>
