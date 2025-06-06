@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 🦷 DentalCare Clinic Website
+A modern dental clinic website built with React and React Bootstrap. Designed as part of a UI/UX project.
 
 ## Available Scripts
 
