@@ -201,3 +201,11 @@ h2 {
   width: 100%;
 }
 
+.contact-card strong {
+  color: #1a73e8;
+  font-weight: 600;
+}
+.contact-card div {
+  font-size: 1.1em;
+}
+
