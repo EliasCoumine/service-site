@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 import { FaHome, FaTooth, FaCalendarAlt, FaEnvelope } from 'react-icons/fa'; /* icons imported from react */
 import '../App.css'; 
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Tooltip from 'react-bootstrap/Tooltip';
 
 
 const navLinks = [
@@ -21,18 +23,24 @@ const Navigation = () => {
 
       <div className="nav-icon-bar d-flex gap-3 align-items-center">
         {/*quick loop to iterate over the navLinks array */}
-        {navLinks.map((link, idx) => (
-          <a
-            key={idx}
-            href={link.href}
-            className={`icon-link ${activeIdx === idx ? 'active' : ''}`}
-            onClick={() => setActiveIdx(idx)}
-            aria-label={link.label}
-          >
-            {link.icon}
-          </a>
-        ))}
-      </div>
+  {navLinks.map((link, idx) => (
+    <OverlayTrigger
+      key={idx}
+      placement="bottom"
+      overlay={<Tooltip id={`tooltip-${idx}`}>{link.label}</Tooltip>}
+    >
+      <a
+        href={link.href}
+        className={`icon-link ${activeIdx === idx ? 'active' : ''}`}
+        onClick={() => setActiveIdx(idx)}
+        aria-label={link.label}
+        style={{ cursor: 'pointer' }}
+      >
+        {link.icon}
+      </a>
+    </OverlayTrigger>
+  ))}
+</div>
     </Navbar>
   );
 };

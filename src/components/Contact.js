@@ -1,33 +1,37 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import '../App.css'; 
+import '../App.css';
 
 const Contact = () => (
   <section id="contact" className="contact-section-bg py-5">
     <Container>
+      {/* Centered section title */}
+      <h2 className="text-primary text-center mb-5" style={{ fontWeight: 700 }}>
+        {/* <span role="img" aria-label="tooth" style={{ fontSize: "1.5em" }}></span> */}
+        Contact Us
+      </h2>
+
       {/* Card component w. shadow */}
       <Card className="shadow-lg p-4 contact-card">
         <Row className="align-items-center g-4">
           <Col md={5}>
-            <h2 className="text-primary mb-4 d-flex align-items-center" style={{ fontWeight: 700 }}>
-              <span role="img" aria-label="tooth" style={{ fontSize: "1.5em", verticalAlign: 'middle' }}></span>
-              <span style={{ marginLeft: '0.6em' }}>Contact Us</span>
-            </h2>
-            <div style={{ marginBottom: '1em' }}>
-              <strong> Address:</strong><br />
-              123 Dental Street, Ottawa, ON
-            </div>
-            <div style={{ marginBottom: '1em' }}>
-              <strong>Email:</strong><br />
-              info@dentalcare.com
-            </div>
             <div>
-              <strong>Phone:</strong><br />
-              (613) 456-7890
+              <div style={{ marginBottom: '0.8em' }}>
+                <strong>Address:</strong><br />
+                123 Dental Street, Ottawa, ON
+              </div>
+              <div style={{ marginBottom: '0.8em' }}>
+                <strong>Email:</strong><br />
+                info@dentalcare.com
+              </div>
+              <div>
+                <strong>Phone:</strong><br />
+                (613) 456-7890
+              </div>
             </div>
           </Col>
           <Col md={7}>
-          {/*div that is styled to make the map roudned and more responsive*/}
+            {/* Map */}
             <div className="map-responsive">
               <iframe
                 title="Clinic Location"
