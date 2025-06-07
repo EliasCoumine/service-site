@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar} from 'react-bootstrap';
 import { FaHome, FaTooth, FaCalendarAlt, FaEnvelope } from 'react-icons/fa'; /* icons imported from react */
 import '../App.css'; 
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -14,7 +14,7 @@ const navLinks = [
 ];
 
 const Navigation = () => {
-  {/* tracks the state of the icon to add an underline when needed */}
+  
   const [activeIdx, setActiveIdx] = useState(0);
 
   return (
@@ -22,7 +22,7 @@ const Navigation = () => {
       <span className="navbar-brand text-primary">DentalCare Clinic</span>
 
       <div className="nav-icon-bar d-flex gap-3 align-items-center">
-        {/*quick loop to iterate over the navLinks array */}
+        
   {navLinks.map((link, idx) => (
     <OverlayTrigger
       key={idx}
